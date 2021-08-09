@@ -9,7 +9,7 @@ Example usage:
 
 
 ```
-    python3 -m yajl -ignore venv .
+    python3 -m json_fnl -ignore venv .
 ```
 
 ## Coming Soon!
