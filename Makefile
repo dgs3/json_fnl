@@ -1,3 +1,4 @@
+DIST_DIR := dist
 VENV_DIR := venv
 VENV := . venv/bin/activate
 SOURCE_DIRS := yajl
@@ -6,6 +7,7 @@ SOURCE_DIRS := yajl
 
 clean:
 	rm -rf $(VENV_DIR)
+	rm -rf $(DIST_DIR)
 
 venv:
 	python3.8 -m venv $(VENV_DIR)
@@ -26,8 +28,8 @@ build: venv
 
 test-dist-upload: build
 	$(VENV); python3 -m pip install --upgrade twine
-	$(VENV); python3 -m twine upload --repository testpypi dist/*
+	$(VENV); python3 -m twine upload --repository testpypi $(DIST_DIR)/JsonFNL*
 
 prod-dist-upload: build
 	$(VENV); python3 -m pip install --upgrade twine
-	$(VENV); python3 -m twine upload dist/*
+	$(VENV); python3 -m twine upload $(DIST_DIR)/JsonFNL*
