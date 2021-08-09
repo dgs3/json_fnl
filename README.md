@@ -8,7 +8,7 @@ Example usage:
 
 
 ```
-    yajl -ignore venv .
+    python3 -m yajl -ignore venv .
 ```
 
 ## Coming Soon!

@@ -1,6 +1,6 @@
 VENV_DIR := venv
 VENV := . venv/bin/activate
-SOURCE_DIRS := bin/yajl
+SOURCE_DIRS := yajl
 
 .PHONY: venv clean lint
 
