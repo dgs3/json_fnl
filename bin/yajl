@@ -28,6 +28,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--follow", action="store_true", help="Follow symlinks.", required=False
     )
+    parser.add_argument(
+        "-v",
+        "--verbose",
+        action="store_true",
+        help="Print helpful output.",
+        required=False,
+    )
     return parser.parse_args()
 
 
@@ -69,7 +76,8 @@ def main() -> None:
     invalid = []
     paths = discover_files(args.root_dir, args.extensions, args.ignore, args.follow)
     for path in paths:
-        print(f"Checking path {path}")
+        if args.verbose:
+            print(f"Checking path {path}")
         if not is_valid_json(path):
             invalid.append(path)
     for path in invalid:
