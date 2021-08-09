@@ -30,4 +30,4 @@ test-dist-upload: build
 
 prod-dist-upload: build
 	$(VENV); python3 -m pip install --upgrade twine
-	$(VENV); python3 -m twine upload --repository pypi dist/*
+	$(VENV); python3 -m twine upload dist/*
