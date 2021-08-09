@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Discover and lint all json files."""
 
 import argparse
