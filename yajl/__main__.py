@@ -3,8 +3,8 @@
 import argparse
 import json
 import os
-import typing
 import sys
+import typing
 
 DiscoverReturnType = typing.Generator[str, None, None]
 
