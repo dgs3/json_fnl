@@ -59,7 +59,7 @@ def discover_files(
             if entry.name not in ignore and not directory_is_hidden(entry.name):
                 yield from discover_files(entry.path, extensions, ignore, follow)
         else:
-            if any([entry.name.endswith(ext) for ext in extensions]):
+            if any(entry.name.endswith(ext) for ext in extensions):
                 yield entry.path
 
 
