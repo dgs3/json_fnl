@@ -19,3 +19,15 @@ lint: venv
 
 format: venv
 	$(VENV); black $(SOURCE_DIRS)
+
+build: venv
+	$(VENV); python3 -m pip install --upgrade build
+	$(VENV); python3 -m build
+
+test-dist-upload: build
+	$(VENV); python3 -m pip install --upgrade twine
+	$(VENV); python3 -m twine upload --repository testpypi dist/*
+
+prod-dist-upload: build
+	$(VENV); python3 -m pip install --upgrade twine
+	$(VENV); python3 -m twine upload --repository pypi dist/*
