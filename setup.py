@@ -8,7 +8,7 @@ if sys.version_info < (3, 3):
 
 setup(
     name='yajl',
-    version='0.0.1',
+    version='0.1.0',
     license='BSD',
     url='https://github.com/dgs3/yajl',
     author='Dave Sayles',
