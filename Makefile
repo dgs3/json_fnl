@@ -1,7 +1,7 @@
 DIST_DIR := dist
 VENV_DIR := venv
 VENV := . venv/bin/activate
-SOURCE_DIRS := yajl
+SOURCE_DIRS := json_fnl
 
 .PHONY: venv clean lint
 
