@@ -3,16 +3,17 @@ from setuptools import setup
 
 extra = {}
 
+if sys.version_info < (3, 3):
+    sys.exit("Sorry, Python < 3.3 is not supported.")
+
 setup(
     name='JsonFNL',
-    version='0.1.1',
+    version='0.1.0',
     license='BSD',
     url='https://github.com/dgs3/json_fnl',
     author='Dave Sayles',
     author_email='sayles.dave@gmail.com',
-    description='Find and lint json files.',
-    long_description="file: README.md",
-    long_description_content_type="text/markdown",
+    description='Discover and lint json files.',
     classifiers=[
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
