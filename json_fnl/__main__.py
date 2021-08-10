@@ -12,7 +12,12 @@ DiscoverReturnType = typing.Generator[str, None, None]
 def parse_args() -> argparse.Namespace:
     """Parse some args."""
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("root_dir", help="Directory to search for json files.")
+    parser.add_argument(
+        "root_dir",
+        default=os.getcwd(),
+        help="Directory to search for json files.",
+        nargs="?",
+    )
     parser.add_argument(
         "-e",
         "--extension",
